@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="statelessApp">
+<head lang="en">
+    <title>Stateless Authentication Example</title>
+    <script src="js/angular.js" type="application/javascript"></script>
+    <script src="js/angular-cookies.js" type="application/javascript"></script>
+    <script src="js/controllers.js" type="application/javascript"></script>
+</head>
+<body ng-controller="AuthCtrl" ng-init="init()" style="padding: 10% 20%">
+
+Sustainable Traveling Application<br>
+<hr>
+
+<div ng-hide="authenticated">
+    <a href="auth/facebook?access_token=fake_token">
+        <button>Login with Facebook</button>
+    </a>
+</div>
+<div ng-show="authenticated">
+    Logged in as {{username}}
+    <button ng-click="logout()">Logout</button>
+    <br><br>
+</div>
+
+<div>
+    <button ng-click="getSocialDetails()">Get Social Details</button>
+    <pre>{{socialDetails | json}}</pre>
+</div>
+
+<div>
+    <button ng-click="getUserCurrent()">Get Current User</button>
+    <pre>{{userCurrent | json}}</pre>
+</div>
+
+<div>
+    <button ng-click="getSomeResources()">Get list of mock resources</button>
+    <pre>{{someResources | json}}</pre>
+</div>
+
+<div>
+    <button ng-click="getSomeResource()">Get mock resource</button>
+    <pre>{{someResource | json}}</pre>
+</div>
+
+<div>
+    <button ng-click="getContinents()">Get continents</button>
+    <pre>{{continents | json}}</pre>
+</div>
+
+<div>
+    <button ng-click="getRegions()">Get regions</button>
+    <pre>{{regions | json}}</pre>
+</div>
+
+<div>
+    <button ng-click="getPlaces()">Get places</button>
+    <pre>{{places | json}}</pre>
+</div>
+
+<div>
+    <button ng-click="generateQRCodeForPlace()">Generate QRCode for place</button>
+    <pre>{{qrcode | json}}</pre>
+</div>
+
+<div>
+    <button ng-click="visitPlace()">Visit place</button>
+    <pre>{{visitPlaceAnswer | json}}</pre>
+</div>
+
+<div>
+    <button ng-click="removeUser()">Remove user</button>
+    <pre>{{removeUserAnswer | json}}</pre>
+</div>
+
+</body>
+</html>
