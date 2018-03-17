@@ -3,6 +3,8 @@ package org.sustrav.demo.data;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.sustrav.demo.data.model.Place;
+import org.sustrav.demo.data.model.User;
 import org.sustrav.demo.data.model.VisitedPlace;
 
 import java.util.List;
@@ -14,4 +16,6 @@ public interface VisitedPlaceRepository extends JpaRepository<VisitedPlace, Stri
     void deleteVisitedPlaceForUser(Long userId);
 
     List<VisitedPlace> findAllByUserId(Long userId);
+
+    List<VisitedPlace> findByUserAndPlace(User user, Place place);
 }

@@ -11,8 +11,9 @@ public interface PlaceRepository extends JpaRepository<Place, Long> {
 
     @Query("select p from Place p where " +
             "within(p.location, ?1) = true and " +
-            "p.id not in (select vp.place.id from VisitedPlace vp where vp.user.id=?2)")
-    List<Place> findNearestPlaces(Geometry geometry, Long userid);
+            "p.id not in (select vp.place.id from VisitedPlace vp where vp.user.id=?2) and " +
+            "p.availableFromPoints <= ?3")
+    List<Place> findNearestPlaces(Geometry geometry, Long userid, int points);
 
     @Query("select p from Place p where within(p.location, ?1) = true and p.id = ?2")
     Place findPlaceInsideLocation(Geometry geometry, Long id);

@@ -23,7 +23,6 @@ public class User {
     @NotNull
     @JsonIgnore
     private String providerUserId;
-    @NotNull
     @JsonIgnore
     private String accessToken;
     @NotNull
@@ -32,6 +31,12 @@ public class User {
     @NotNull
     @Size(min = 4, max = 30)
     private String username;
+    @Size(min = 4, max = 30)
+    private String lastName;
+    @Size(min = 4, max = 30)
+    private String firstName;
+    @Size(min = 4, max = 30)
+    private String email;
     @Transient
     private long expires;
     @NotNull
@@ -191,5 +196,29 @@ public class User {
 
     public void setFbToken(String fbToken) {
         this.fbToken = fbToken;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }

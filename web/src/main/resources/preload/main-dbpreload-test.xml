@@ -1,0 +1,19 @@
+<content truncateEntities="Continent,Place,Region,VisitedPlace">
+
+    <Continent code="c1" name="First continent" imageId="c1.png"/>
+    <Continent code="c2" name="Second continent" imageId="c2.png"/>
+    <Continent code="c3" name="Third continent" imageId="c3.png"/>
+
+    <Region code="r1" name="First region" continent.id="c1" imageId="r1.png"/>
+    <Region code="r2" name="Second region" continent.id="c1" imageId="r2.png"/>
+    <Region code="r3" name="Third region" continent.id="c1" imageId="r3.png"/>
+
+    <Place name="First place" region.id="r1" availableFromPoints="0" costInPoints="10"
+           description="Description of the first place"
+           imageId="p1.png" qrcodeId="p1-qrcode.png"
+           location="10,-10"/>
+    <Place name="Second place" region.id="r2" availableFromPoints="10" costInPoints="10"
+           description="Description of the second place"
+           imageId="p2.png" qrcodeId="p2-qrcode.png"
+           location="10,-10"/>
+</content>

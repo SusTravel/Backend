@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -28,6 +29,9 @@ public class DatabasePopulatorImpl implements DatabasePopulator {
 
     public static final Logger LOGGER = LoggerFactory.getLogger(DatabasePopulatorImpl.class);
 
+    @Value("${database.preload.resources}")
+    private String databasePreload;
+
     @PersistenceContext
     private EntityManager em;
 
@@ -45,7 +49,7 @@ public class DatabasePopulatorImpl implements DatabasePopulator {
 
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver(resourceLoader.getClassLoader());
         try {
-            for (Resource resource : resolver.getResources("classpath*:/**/*-dbpreload.xml")) {
+            for (Resource resource : resolver.getResources(databasePreload)) {
                 parseAndSave(resource);
             }
         } catch (Exception ex) {

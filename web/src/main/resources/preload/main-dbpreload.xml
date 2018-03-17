@@ -1,15 +1,37 @@
 <content truncateEntities="Continent,Place,Region,VisitedPlace">
 
-    <Continent code="c1" name="First continent" imageId="c1.png"/>
-    <Continent code="c2" name="Second continent" imageId="c2.png"/>
-    <Continent code="c3" name="Third continent" imageId="c3.png"/>
+    <Continent code="c1" name="Africa" imageId="Africa-transparent.png"/>
+    <Continent code="c2" name="Europe" imageId="Europe-transperant.png"/>
+    <Continent code="c3" name="America" imageId="America-transperant.png"/>
+    <Continent code="c4" name="Asia" imageId="Asia-transperant.png"/>
+    <Continent code="c5" name="Australia" imageId="Australia-transparent.png"/>
 
-    <Region code="r1" name="First region" continent.id="c1" imageId="r1.png"/>
-    <Region code="r2" name="Second region" continent.id="c1" imageId="r2.png"/>
-    <Region code="r3" name="Third region" continent.id="c1" imageId="r3.png"/>
+    <Region code="r1" name="Luxembourg" continent.id="c2" imageId="r1.png"/>
+    <Region code="r2" name="France" continent.id="c2" imageId="r2.png"/>
+    <Region code="r3" name="Germany" continent.id="c2" imageId="r3.png"/>
 
-    <Place name="First place" region.id="r1" availableFromPoints="0" costInPoints="10"
-           description="Description of the first place"
-           imageId="p1.png" qrcodeId="p1-qrcode.png"
-           location="10,-10"/>
+    <Place name="Larochette Castle" region.id="r1" availableFromPoints="0" costInPoints="3"
+           description="Dating from the 11th century, the castle was destroyed by fire at the end of the 16th century. Since its acquisition by the State of Luxembourg in 1979, some restoration work has been undertaken.The castle ruins are located on a promontory some 150 metres above the White Ernz which runs through the small town of Larochette. The access road crosses a large farmyard with fortified earthworks. The main building is surrounded by a wall, now partly destroyed. A deep ditch divides the castle into two parts. At the far end of the promontory, the remains of several manor houses attest to the high quality of the architecture and its rather pompous style."
+           imageId="Larochette.png" qrcodeId="qrcodeLarochette.png"
+           location="49.785556,6.216944"/>
+    <Place name="Bourglinster Castle" region.id="r1" availableFromPoints="6" costInPoints="6"
+           description="The castle is first mentioned in 1098 as belonging to St Symeon of Trier. At the time it had a residential keep, a chapel and a wall. During the second half of the 14th century, the chapel was extended and a tower was added on the northern side. The lower castle with a moat and two defensive towers was built in the 15th century. Both castles were partly destroyed during the 16th century wars (1542–1544) but were soon repaired and a Renaissance wing was added (1548). Parts of the lower castle were again destroyed by the French in the 1680s. In the early 18th century, a Baroque façade was built at the far end of the courtyard. After the castle was acquired by the Luxembourg State in 1968, the buildings were fully restored and, in 1982, opened for exhibitions, concerts, meetings and receptions."
+           imageId="Bourglinster.png" qrcodeId="qrcodeBourglinster.png"
+           location="49.7,6.216667"/>
+    <Place name="Beaufort Castle" region.id="r1" availableFromPoints="3" costInPoints="4"
+           description="In the 11th century the castle began as a small square-shaped fortress on a large rock protected by a moat and a second wall above the valley. A reference from 1192 indicates that Wauthtier de Wiltz et Beaufort was its first lord. During the first half of the 12th century, a keep was added and the gate was moved and enlarged. In 1348, the property came into the hands of the House of Orley after Adelaide of Beaufort married William of Orley. The Lords of Orley made significant extensions overlooking the valley. In 1477, Maximilian of Austria transferred the castle to Johann Bayer von Boppard after Johann von Orley-Beaufort committed a breach in trust. In 1539, Bernard von Velbrück became Lord of Beaufort through marriage and added the large Renaissance wing with cross-framed windows on top of the medieval walls."
+           imageId="Beaufort.png" qrcodeId="qrcodeBeaufort.png"
+           location="49.833889,6.285556"/>
+    <Place name="Mullerthal" region.id="r1" availableFromPoints="0" costInPoints="3"
+           description="Mullerthal is a village in the commune of Waldbillig, in eastern Luxembourg. As of 2005, the village has a population of 146. It lends its name to the alternative name of a region of eastern Luxembourg, otherwise known as Little Switzerland. Little Switzerland is thought to have similar terrain to its namesake country, hence the name; it is dominated by craggy terrain, thick forests, some caves and myriad small streams. Unlike Switzerland, Little Switzerland is low-lying, even by Luxembourg standards (its highest peak is only 414 m above sea level)."
+           imageId="Mullerthal.png" qrcodeId="qrcodeMullerthal.png"
+           location="49.783333,6.316667"/>
+    <Place name="Echternach" region.id="r1" availableFromPoints="0" costInPoints="3"
+           description="Echternach lies near the border with Germany, and is the oldest town (current population 4,610) in Luxembourg. It grew around the walls of the Abbey of Echternach, which was founded in 698 by St Willibrord, an English monk from Ripon, Northumbria (in present-day North Yorkshire, England), who became the first bishop of Utrecht and worked to Christianize the Frisians. As bishop, he was the Echternach monastery's abbot until his death in 739. The river Sauer that flows past the town now forms the border between Luxembourg and Germany; in the later Roman Empire and under the Merovingians by contrast, the Sauer did not form a border or march in this area. The Roman villa at Echternach (traces of which were rediscovered in 1975) was reputed to be the largest North of the Alps."
+           imageId="Echternach.png" qrcodeId="qrcodeEchternach.png"
+           location="49.811667,6.421667"/>
+    <Place name="Esch-sur-Sûre Castle" region.id="r1" availableFromPoints="3" costInPoints="4"
+           description="Now a ruin, is located on a spur in the small town of Esch-sur-Sûre in the north-west of Luxembourg. It is naturally protected by a sharp meander in the River Sûre which surrounds the town and the castle on three sides. In 927, a certain Meginaud or Maingaud and his wife Hiletrude acquired the site of Esch-sur-Sûre where he built a Romanesque tower eight metres square as well as farm buildings. The castle was considerably enlarged in the Gothic style by the two last Counts of Esch during the 13th century. With the introduction of gunpowder in the 15th century, additional defences were required. The entire village was reinforced with a solid wall stretching 450 metres around the village complete with two defensive towers. The round watchtower or Lochturm opposite the keep was also built in the 15th century as were the entrance gate and the castle stables."
+           imageId="EschsurSure.png" qrcodeId="qrcodeEschsurSure.png"
+           location="49.911111,5.934722"/>
 </content>
