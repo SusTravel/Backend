@@ -4,9 +4,7 @@ import java.net.URL;
 import java.util.Date;
 import java.util.Random;
 
-/**
- * Created by CUSTDEV3 on 17/03/2018.
- */
+
 public class Joke {
     public static void main(String[] args) throws Exception {
         Random random = new Random(new Date().getTime());
