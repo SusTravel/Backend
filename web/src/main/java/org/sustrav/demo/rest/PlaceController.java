@@ -43,7 +43,7 @@ public class PlaceController {
             return new ArrayList<>();
 
         List<Place> ret = placeRepository.findNearestPlaces(geometry, user.getId(), user.getPoints());
-        imagesDomainService.setDomainForEntities(ret);
+        //imagesDomainService.setDomainForEntities(ret);
         return ret;
     }
 

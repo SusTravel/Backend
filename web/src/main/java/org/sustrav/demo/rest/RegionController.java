@@ -23,7 +23,7 @@ public class RegionController {
     @RequestMapping(value = "/api/continent/{code}/region", method = RequestMethod.GET)
     public List<Region> getContinents(@PathVariable("code") String code) {
         List<Region> ret = regionRepository.findAllByContinentCode(code);
-        imagesDomainService.setDomainForEntities(ret);
+        //imagesDomainService.setDomainForEntities(ret);
         return ret;
     }
 }

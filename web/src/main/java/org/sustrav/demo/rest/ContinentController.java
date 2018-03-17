@@ -23,7 +23,7 @@ public class ContinentController {
     @RequestMapping(value = "/api/continent", method = RequestMethod.GET)
     public List<Continent> getContinents(HttpServletRequest request) {
         List<Continent> ret = continentRepository.findAll();
-        imagesDomainService.setDomainForEntities(ret);
+        //imagesDomainService.setDomainForEntities(ret);
         return ret;
     }
 }
